@@ -9,7 +9,7 @@ Here i'll be uploading Golang exercises from coding interviews I've found -and p
 First exercise I worked with is the *'Validate Brackets Sequence'*, which essentially consist on verifying if a closing bracket ")", "]", "}" corresponds to the last openning one found on a given string and returning a boolean in either case.
 
 ### Example:
-Given the string "([{}]]" would return true whereas the string "([}]]" would return false, since ']' is not paired with '{'.
+Given the string "([{}])" would return true whereas the string "([}]]" would return false, since ']' is not paired with '{'.
 
 ### My implementation:
 As you may see in the valbracket package I defined two strucks:
