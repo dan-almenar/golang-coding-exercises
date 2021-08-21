@@ -61,6 +61,7 @@ func (s *Stack) compare(r rune) bool {
 }
 
 func ValidBracketSequence(s string) bool {
+	var valid bool
 	brackets := newStack()
 	for _, char := range s {
 		switch char {
@@ -74,14 +75,14 @@ func ValidBracketSequence(s string) bool {
 			n := newNode(char)
 			brackets.append(n)
 		case ')':
-			return brackets.compare(char)
+			valid = brackets.compare(char)
 		case ']':
-			return brackets.compare(char)
+			valid = brackets.compare(char)
 		case '}':
-			return brackets.compare(char)
+			valid = brackets.compare(char)
 		default:
 			continue
 		}
 	}
-	return false
+	return valid
 }
